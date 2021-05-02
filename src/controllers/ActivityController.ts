@@ -1,14 +1,15 @@
 import { Request, Response } from 'express'
 
+import { CreateActivityService } from '../services/CreateActivityService'
+
 class ActivityController {
   async create(request: Request, response: Response) {
-    const { name, activityDate, courseUnitId } = request.body
+    const activityData = request.body
+    const createActivity = new CreateActivityService()
 
-    return response.json({
-      name,
-      activityDate,
-      courseUnitId
-    })
+    const activity = await createActivity.execute(activityData)
+
+    return response.json(activity)
   }
 }
 
