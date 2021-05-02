@@ -24,7 +24,7 @@ class CourseUnit {
   activities: Activity[]
 
   @CreateDateColumn()
-  created_at: Date
+  createdAt: Date
 }
 
 export { CourseUnit }
