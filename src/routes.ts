@@ -13,9 +13,12 @@ const userController = new UserController()
 
 const routes = Router()
 
-routes.get('/test', (request, response) => response.json({ message: 'It is working, Hooray!' }))
-
 routes.post('/auth', authController.create)
+
+routes.get('/user', authenticated, userController.show)
+routes.get('/activity', authenticated, activityController.show)
+routes.get('/courseUnit', authenticated, courseUnitController.show)
+
 routes.post('/user', userController.create)
 routes.post('/activity', authenticated, activityController.create)
 routes.post('/courseUnit', authenticated, courseUnitController.create)

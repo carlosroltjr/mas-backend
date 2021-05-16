@@ -25,7 +25,7 @@ export default (request: Request, response: Response, next: NextFunction) => {
 
   const { subject, role } = verifyToken as Token
 
-  request.body = {
+  request.body.user = {
     id: subject,
     role: role
   }
