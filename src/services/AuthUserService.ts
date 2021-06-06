@@ -20,19 +20,29 @@ class AuthUserService {
       return { error: 'User not found' }
     }
 
-    const comparePassword = compare(password, user.password)
+    const comparePassword = await compare(password, user.password)
 
     if (!comparePassword) {
       return { error: 'Incorrect password' }
     }
+
     const { secret, expiresIn } = authConfig.jwt
 
-    const token = sign({"role": "user"}, secret, {
+    const token = sign({"role":"user"}, secret, {
       subject: user.id,
       expiresIn
     })
 
-    return token
+    const {id, name, email:emailUser} = user 
+
+    return {
+      user:{
+          id,
+          name,
+          email: emailUser
+      },
+      token
+    }
   }
 }
 
