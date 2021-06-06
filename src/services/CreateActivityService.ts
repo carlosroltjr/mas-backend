@@ -5,16 +5,18 @@ import { Activity } from '../models/Activity'
 interface ActivityData {
   name: string
   activityDate: string
+  grade: number
   courseUnitId: string
 }
 
 class CreateActivityService {
-  public async execute({ name, activityDate, courseUnitId }: ActivityData) {
+  public async execute({ name, activityDate, grade, courseUnitId }: ActivityData) {
     const activitiesRepository = getRepository(Activity)
 
     const activity = {
       name,
       activityDate,
+      grade,
       courseUnitId
     }
 

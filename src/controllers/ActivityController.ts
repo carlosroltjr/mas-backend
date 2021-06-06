@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 
 import { CreateActivityService } from '../services/CreateActivityService'
-import { GetActivitiesService } from '../services/GetActivitiesServices'
+import { GetActivitiesService } from '../services/GetActivitiesService'
 
 class ActivityController {
   async create(request: Request, response: Response) {
