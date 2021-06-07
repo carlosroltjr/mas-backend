@@ -8,7 +8,7 @@ class CourseUnitController {
     const courseUnitData = request.body
     const createCourseUnit = new CreateCourseUnitService()
 
-    const courseUnit = await createCourseUnit.execute(courseUnitData)
+    const courseUnit = createCourseUnit.execute(courseUnitData)
 
     return response.json(courseUnit)
   }

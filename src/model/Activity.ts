@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 
 import { CourseUnit } from './CourseUnit'
 
-@Entity("activies")
+@Entity("activities")
 class Activity {
   constructor(){
     if (!this.id) {

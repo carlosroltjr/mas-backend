@@ -3,7 +3,7 @@ import { sign } from 'jsonwebtoken'
 import { getRepository } from 'typeorm'
 
 import authConfig from '../config/auth'
-import { User } from '../models/User'
+import { User } from '../model/User'
 
 interface AuthData {
   email: string,

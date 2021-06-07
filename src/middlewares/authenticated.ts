@@ -4,7 +4,7 @@ import { verify } from 'jsonwebtoken'
 import authConfig from '../config/auth'
 
 interface Token {
-  subject: string,
+  subject: string
   role: string
 }
 
