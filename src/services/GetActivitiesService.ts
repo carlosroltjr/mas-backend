@@ -8,7 +8,6 @@ interface UserId {
 
 class GetActivitiesService {
   public async execute({ id }: UserId) {
-    console.log('Id do usuário da atividade: ' + id)
 
     const activityRepository = getRepository(Activity)
 
