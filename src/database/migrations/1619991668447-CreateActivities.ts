@@ -17,12 +17,12 @@ export class CreateActivities1619991668447 implements MigrationInterface {
                         type: 'varchar'
                     },
                     {
-                        name: 'activityDate',
-                        type: 'varchar'
-                    },
-                    {
                         name:'grade',
                         type:'decimal' 
+                    },
+                    {
+                        name: 'activityDate',
+                        type: 'timestamp'
                     },
                     {
                         name: 'courseUnitId',
@@ -30,7 +30,7 @@ export class CreateActivities1619991668447 implements MigrationInterface {
                     },
                     {
                         name: 'createdAt',
-                        type: 'varchar',
+                        type: 'timestamp',
                         default: 'now()'
                     }
                 ],

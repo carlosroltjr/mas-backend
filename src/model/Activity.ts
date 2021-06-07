@@ -18,7 +18,7 @@ class Activity {
   name: string
 
   @Column()
-  activityDate: string
+  activityDate: Date
 
   @Column()
   courseUnitId: string
